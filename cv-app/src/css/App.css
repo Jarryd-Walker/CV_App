@@ -1,0 +1,39 @@
+#resumeContainer{
+    display: flex;
+}
+#nameContainer{
+    border-bottom: 2px solid white;
+    width: 250px;
+    height: 250px;
+    display: grid;
+    place-content: center;
+}
+#leftSide{
+    display: grid;
+    place-content: center;
+    width: 250px;
+    background-color: black;
+}
+#leftSide h1,
+#leftSide h2,
+#leftSide h3,
+#leftSide h4,
+#leftSide p{
+    color: white;
+}
+#leftSide h4{
+    margin-top: 0;
+}
+#leftSide h3{
+    margin-bottom: 0.2rem;
+}
+#rightSide{
+    width: 750px;
+    padding: 0.5rem;
+}
+#rightSide h2{
+    border-bottom: 2px solid black;
+}
+#contactContainer{
+    text-align: center;
+}
