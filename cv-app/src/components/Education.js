@@ -9,7 +9,6 @@ function Education(){
         startDate: '',
         endDate: '',
         id: uniqid(),
-        ar: []
     }])
     const [hiddenClass, setHiddenClass] = useState('hidden')
     const [hideBtn, setHideBtn] = useState('')
@@ -54,7 +53,7 @@ function Education(){
             <div>
                 {
                     React.Children.toArray(education.map(({ qualification, school, startDate, endDate, id }) => (
-                        <section className="educationData">
+                        <section className="formData">
                             <h3 className="qual">{qualification}</h3>
                             <span className="edu">{school}</span>
                             <span className="sta">Started: {startDate}</span>
@@ -65,7 +64,7 @@ function Education(){
                     )
                 }
             </div>
-            <form id="educationForm" className={hiddenClass} action="">
+            <form id="form" className={hiddenClass} action="">
                 <label className="qual" htmlFor="">Qualification</label>
                 <input ref={qualificationRef} className="qual2" name="qualification" placeholder="Add here" type="text" />
                 <label className="edu" htmlFor="">Education provider</label>
