@@ -4,6 +4,7 @@ function EditableInput(props) {
     
     const [editable, setEditable] = useState(false)
     const [HtmlTag] = useState(props.tag)
+    const [InputTag] = useState(props.inputTag)
     const [text, setText] = useState(props.value)
 
     function handleChange(e) {
@@ -30,7 +31,7 @@ function EditableInput(props) {
 
     return (
         editable ?
-        <input
+        <InputTag
             type='text'
             value={text}
             autoFocus={true}

@@ -4,10 +4,10 @@ import EditableInput from "./EditableInput";
 function PersonalStatement(){
 
     return (
-        <>
+        <div className='personalStatementInput'>
             <h2>Personal Statement</h2>
-            <EditableInput value='Add some info about yourself here' tag='p'/>     
-        </>
+            <EditableInput inputTag='textarea' value='Add some info about yourself here' tag='p'/>     
+        </div>
     )
 }
 
