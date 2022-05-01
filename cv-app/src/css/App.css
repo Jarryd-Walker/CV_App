@@ -1,6 +1,7 @@
 #resumeContainer{
     display: flex;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     width: 80%;
     border: 1px solid black;
     box-shadow: 7px 6px 9px 0px rgb(50 50 50 / 75%);
@@ -34,9 +35,10 @@
     margin-bottom: 0.2rem;
 }
 #rightSide{
-    width: 750px;
+    width: 75vh;
     padding: 0.5rem;
     background-color: white;
+    padding-bottom: 4rem;
 }
 #rightSide h2{
     border-bottom: 2px solid black;
@@ -98,6 +100,7 @@
 }
 .formData h3{
     margin-bottom: 0.3rem;
+    margin-top: 0;
 }
 .formData span{
     margin-bottom: 0.3rem;

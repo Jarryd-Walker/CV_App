@@ -3,13 +3,7 @@ import uniqid from 'uniqid'
 
 function WorkExperience(){
     
-    const [experience, setExperience] = useState([{
-        title: '',
-        company: '',
-        startDate: '',
-        endDate: '',
-        id: uniqid(),
-    }])
+    const [experience, setExperience] = useState([])
     const [hiddenClass, setHiddenClass] = useState('hidden')
     const [hideBtn, setHideBtn] = useState('')
     const titleRef = useRef()
@@ -50,6 +44,7 @@ function WorkExperience(){
     return (
         <>
             <h2>Work Experience</h2>
+            {experience.length > 0 ?
             <div>
                 {
                     React.Children.toArray(experience.map(({ title, company, startDate, endDate, id }) => (
@@ -64,6 +59,8 @@ function WorkExperience(){
                     )
                 }
             </div>
+            :
+            null}
             <form id="form" className={hiddenClass} action="">
                 <label className="qual" htmlFor="">Title</label>
                 <input ref={titleRef} className="qual2" name="title" placeholder="Add here" type="text" />

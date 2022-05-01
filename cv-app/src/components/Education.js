@@ -3,13 +3,7 @@ import uniqid from 'uniqid'
 
 function Education(){
     
-    const [education, setEducation] = useState([{
-        qualification: '',
-        school: '',
-        startDate: '',
-        endDate: '',
-        id: uniqid(),
-    }])
+    const [education, setEducation] = useState([])
     const [hiddenClass, setHiddenClass] = useState('hidden')
     const [hideBtn, setHideBtn] = useState('')
     const qualificationRef = useRef()
@@ -50,6 +44,7 @@ function Education(){
     return (
         <>
             <h2>Education</h2>
+           { education.length > 0 ?
             <div>
                 {
                     React.Children.toArray(education.map(({ qualification, school, startDate, endDate, id }) => (
@@ -64,6 +59,8 @@ function Education(){
                     )
                 }
             </div>
+            :
+            null}
             <form id="form" className={hiddenClass} action="">
                 <label className="qual" htmlFor="">Qualification</label>
                 <input ref={qualificationRef} className="qual2" name="qualification" placeholder="Add here" type="text" />
